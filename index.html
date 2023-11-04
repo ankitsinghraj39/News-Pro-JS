@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+</body>
+<header class="header">
+    <div class="header-container container flex">
+        <a href="#home" class="logo-anchor" onclick="reload()">
+            <img src="logo.png" alt="Company logo">
+        </a>
+        <nav class="navbar flex">
+            <div class="nav-div">
+                <ul class="ul flex">
+                    <li id="ipl" onclick="cursorOnThisNavLink('ipl')" class="hover-link nav-items">IPL</li>
+                    <li id="finance" onclick="cursorOnThisNavLink('finance')" class="hover-link nav-items">Finance</li>
+                    <li id="politics" onclick="cursorOnThisNavLink('politics')" class="hover-link nav-items">Politics</li>
+                </ul>
+            </div>
+            <div class="search-bar flex">
+                <input type="text" id="search-input" class="search-input" placeholder="e.g. ipl">
+                <button class="btn search-btn" onclick="cursorOnSearchInput('search-input')">Search</button>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<section class="section">
+    <div class="card-container container flex" id="card-container">
+        
+    </div>
+</section>
+
+<template id="template-news-card">
+    <div class="card">
+        <div class="news-card-header">
+            <img src="https://via.placeholder.com/400x200" alt="card image" id="news-img">
+        </div>
+        <div class="news-card-details">
+            <h3 id="news-title">News Title</h3>
+            <h5 class="news-source" id="news-source">End Gadget Date & time</h5>
+            <p id="news-desc">(Description) Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente nemo delectus suscipit quod excepturi quaerat sit alias nisi, autem ducimus.</p>
+        </div>
+    </div>
+</template>
+
+<footer class="footer">
+    <div class="footer-container container flex">
+        <p> International News &copy; Copyright 2023 - All Rights Reserved</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+
+</html>
